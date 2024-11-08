@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/*
+--------------------|📝 : Abstracts
+*/
+/*
+--------------------|📝 : Colors
+*/
+/*
+--------------------|📝 : Flex
+*/
+/*
+--------------------|📝 : Grid
+*/
+/*
+--------------------|📝 : Absolute position center
+*/
+/*
+--------------------|📝 : Media query manager
+*/
+/*
+----------|✏️ : 0 - 600 px : Phone
+--------------- 600 - 900 px : Tablet portrait
+--------------- 900 - 1200 px : Tablet landscape
+--------------- [1200 - 1800 px] is where our normal styles apply
+--------------- 1800px + : Big desktop
+*/
+/*
+----------|✏️ : $breakpoint argument choices =
+--------------- phone
+--------------- tab-port
+--------------- tab-land
+--------------- big-desktop
+*/
+/*
+--------------------|📝 : Base 
+*/
+/*
+--------------------|📝 : Reset
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/*
+--------------------|📝 : Tag
+*/
+html {
+  font-size: 62.5%; }
+  @media only screen and (min-width: 112em) {
+    html {
+      font-size: 75%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  box-sizing: border-box; }
+
+/*
+--------------------|📝 : Text selection
+*/
+/*
+--------------------|📝 : Container
+*/
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 1.6rem; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+/*
+--------------------|📝 : Components 
+*/
+/*
+--------------------|📝 : Layout 
+*/
+/*
+--------------------|📝 : Pages 
+*/

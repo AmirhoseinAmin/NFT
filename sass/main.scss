@@ -1,0 +1,36 @@
+/*
+--------------------|📝 : Abstracts
+*/
+
+@import "abstracts/variable";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+/*
+--------------------|📝 : Base 
+*/
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+/*
+--------------------|📝 : Components 
+*/
+
+@import "components/button";
+@import "components/card";
+
+/*
+--------------------|📝 : Layout 
+*/
+
+@import "layout/header";
+@import "layout/footer";
+
+/*
+--------------------|📝 : Pages 
+*/
+
+@import "pages/home";
