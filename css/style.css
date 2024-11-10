@@ -90,6 +90,11 @@ body {
   font-weight: 600;
   line-height: 1.2; }
 
+.heading-secondary {
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: 500; }
+
 .heading-tertiary {
   font-size: 1.8rem;
   color: #fff;
@@ -175,6 +180,27 @@ body {
       font-weight: 400;
       color: rgba(255, 255, 255, 0.4); }
 
+.feature-card {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .feature-card li {
+    padding: 2.4rem;
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+  .feature-card__img {
+    width: 6rem;
+    padding: 1rem;
+    border-radius: 50%; }
+    .feature-card__img--purple {
+      background-color: #4E6DD8; }
+    .feature-card__img--pink {
+      background-color: #BB47A6; }
+
 /*
 --------------------|📝 : Layout 
 */
@@ -234,10 +260,13 @@ header {
 --------------------|📝 : Main
 */
 main section {
-  padding-bottom: 6.4rem; }
+  padding: 8rem 0; }
 
 /*
 --------------------|📝 : Sections
+*/
+/*
+----------|📝 : Hero
 */
 .section-hero {
   background-color: #0A0F29; }
@@ -256,3 +285,24 @@ main section {
     display: block;
     width: 100%;
     justify-self: flex-end; }
+
+/*
+----------|📝 : Feature
+*/
+.section-feature {
+  background-color: #0A0F29;
+  background-image: linear-gradient(to left, rgba(187, 71, 166, 0.1), rgba(78, 109, 216, 0.1));
+  border: .4rem solid;
+  border-image: linear-gradient(to left, rgba(187, 71, 166, 0.6), rgba(78, 109, 216, 0.6));
+  border-image-slice: 1;
+  border-right: none;
+  border-left: none; }
+  .section-feature__box {
+    display: grid;
+    gap: 3.2rem;
+    grid-template-columns: 3fr 0.2rem 4fr;
+    align-items: center; }
+    .section-feature__box .rule {
+      height: 12.8rem;
+      display: block;
+      background: linear-gradient(to bottom, #BB47A6, #4E6DD8); }

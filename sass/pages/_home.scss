@@ -2,33 +2,37 @@
 --------------------|📝 : Main
 */
 
-main{
-    section{
-        padding-bottom: 6.4rem;
-    }
+main {
+  section {
+    padding: 8rem 0;
+  }
 }
 
 /*
 --------------------|📝 : Sections
 */
 
+/*
+----------|📝 : Hero
+*/
+
 .section-hero {
   background-color: $color-primary;
 
   &__box {
-    @include grid(0, null){
+    @include grid(0, null) {
       grid-template-columns: 5fr 6fr;
     }
   }
 
-  &__content{
+  &__content {
     align-self: flex-end;
-    @include flex(2.4, null, center, column)
+    @include flex(2.4, null, center, column);
   }
 
-  &__btns{
-    a:first-child{
-        margin-right: 2.4rem;
+  &__btns {
+    a:first-child {
+      margin-right: 2.4rem;
     }
   }
 
@@ -39,3 +43,29 @@ main{
   }
 }
 
+/*
+----------|📝 : Feature
+*/
+
+.section-feature {
+  background-color: $color-primary;
+  background-image: linear-gradient(to left, rgba($color-tertiary, 0.1), rgba($color-secondary, 0.1));
+  border: .4rem solid;
+  border-image: linear-gradient(to left, rgba($color-tertiary, 0.6), rgba($color-secondary, 0.6));
+  border-image-slice: 1;
+  border-right: none;
+  border-left: none;
+
+  &__box{
+    @include grid(3.2, null){
+      grid-template-columns: 3fr 0.2rem 4fr;
+      align-items: center;
+    }
+
+    .rule{
+      height: 12.8rem;
+      display: block;
+      background: linear-gradient(to bottom, $color-tertiary, $color-secondary);
+    }
+  }
+}

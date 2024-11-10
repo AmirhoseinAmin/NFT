@@ -1,0 +1,28 @@
+/*
+--------------------|📝 : Feature
+*/
+
+.feature-card {
+  list-style-type: none;
+  @include flex(0, center, space-between, null);
+
+  li {
+    padding: 2.4rem;
+    @include flex(1.6, center, center, column);
+  }
+
+  &__img {
+    width: 6rem;
+    padding: 1rem;
+    border-radius: 50%;
+
+    &--purple {
+      background-color: $color-secondary;
+    }
+
+    &--pink {
+      background-color: $color-tertiary;
+    }
+}
+
+}

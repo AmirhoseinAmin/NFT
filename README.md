@@ -2,7 +2,7 @@
 
 ## About project
 
-This project is a simple implementation of a Non-Fungible Token (NFT) using the Solid
+This project is a simple implementation of a Non-Fungible Token (NFT) using the Solid.
 
 ## Technologies Used
 
