@@ -10,24 +10,37 @@
     font-size: 1.6rem;
     color: $color-white;
     text-decoration: none;
-    background: linear-gradient(to right, $color-tertiary, $color-secondary);
     border-radius: 0.6rem;
     backface-visibility: hidden;
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1),
-      0 1px 3px rgba(255, 255, 255, 0.2);
     transition: all 0.3s;
   }
 
-  &:hover {
-    transform: translateY(-0.3rem);
-    box-shadow: 0 4px 3px rgba(255, 255, 255, 0.1),
-      0 1px 1px rgba(255, 255, 255, 0.2);
+  &--gradient {
+    &:link,
+    &:visited {
+      background: linear-gradient(to right, $color-tertiary, $color-secondary);
+      box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1),
+        0 1px 3px rgba(255, 255, 255, 0.2);
+    }
+
+    &:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 4px 3px rgba(255, 255, 255, 0.1),
+        0 1px 1px rgba(255, 255, 255, 0.2);
+    }
+
+    &:active,
+    &:focus-visible {
+      transform: translateY(-0.1rem);
+      box-shadow: 0 2px 3px rgba(255, 255, 255, 0.1),
+        0 1px 1px rgba(255, 255, 255, 0.2);
+    }
   }
 
-  &:active,
-  &:focus-visible {
-    transform: translateY(-0.1rem);
-    box-shadow: 0 2px 3px rgba(255, 255, 255, 0.1),
-      0 1px 1px rgba(255, 255, 255, 0.2);
+  &--solid {
+    &:link,
+    &:visited {
+      box-shadow: 0 0 0 .2rem $color-white inset;
+    }
   }
 }

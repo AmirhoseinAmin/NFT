@@ -1,0 +1,41 @@
+/*
+--------------------|📝 : Main
+*/
+
+main{
+    section{
+        padding-bottom: 6.4rem;
+    }
+}
+
+/*
+--------------------|📝 : Sections
+*/
+
+.section-hero {
+  background-color: $color-primary;
+
+  &__box {
+    @include grid(0, null){
+      grid-template-columns: 5fr 6fr;
+    }
+  }
+
+  &__content{
+    align-self: flex-end;
+    @include flex(2.4, null, center, column)
+  }
+
+  &__btns{
+    a:first-child{
+        margin-right: 2.4rem;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    justify-self: flex-end;
+  }
+}
+

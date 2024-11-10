@@ -24,6 +24,6 @@ This project is a simple implementation of a Non-Fungible Token (NFT) using the 
 
 - Border radius (px) :‌ 6 /  / 20 /  /
 
-- line height :‌ /  /  /  /
+- line height (px):‌ 12 / 16 /  /  /
 
 - Letter spacing : /  /  /  /
