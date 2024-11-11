@@ -91,11 +91,16 @@ body {
   line-height: 1.2; }
 
 .heading-secondary {
-  font-size: 2.4rem;
+  font-size: 4.4rem;
   color: #fff;
   font-weight: 500; }
 
 .heading-tertiary {
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: 400; }
+
+.heading-quaternary {
   font-size: 1.8rem;
   color: #fff;
   font-weight: 400; }
@@ -180,6 +185,9 @@ body {
       font-weight: 400;
       color: rgba(255, 255, 255, 0.4); }
 
+/*
+--------------------|📝 : Feature
+*/
 .feature-card {
   list-style-type: none;
   display: flex;
@@ -200,6 +208,59 @@ body {
       background-color: #4E6DD8; }
     .feature-card__img--pink {
       background-color: #BB47A6; }
+
+.nft-card {
+  height: 73%;
+  position: relative;
+  padding: 1.2rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1), 0 1px 3px rgba(255, 255, 255, 0.2);
+  transition: all 0.5s; }
+  .nft-card:hover {
+    height: 100%; }
+  .nft-card:hover .nft-card__content {
+    opacity: 1; }
+  .nft-card:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 0.2rem;
+    border-radius: inherit;
+    background: linear-gradient(#4E6DD8, #BB47A6);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1; }
+  .nft-card__img {
+    width: 100%;
+    display: block; }
+  .nft-card__content {
+    opacity: 0;
+    transition: all 0.5s;
+    transition-delay: 0.1s;
+    margin-top: 1.2rem;
+    display: grid;
+    grid-template-columns: 2fr auto;
+    align-items: flex-start;
+    justify-items: flex-start;
+    row-gap: 2.4rem; }
+  .nft-card__artist {
+    margin-top: 1.2rem;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.4); }
+  .nft-card__price {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #fff; }
+    .nft-card__price--img {
+      display: flex;
+      gap: 0.4rem;
+      align-items: center; }
+  .nft-card__price-eth {
+    width: 2.4rem; }
 
 /*
 --------------------|📝 : Layout 
@@ -292,7 +353,7 @@ main section {
 .section-feature {
   background-color: #0A0F29;
   background-image: linear-gradient(to left, rgba(187, 71, 166, 0.1), rgba(78, 109, 216, 0.1));
-  border: .4rem solid;
+  border: 0.4rem solid;
   border-image: linear-gradient(to left, rgba(187, 71, 166, 0.6), rgba(78, 109, 216, 0.6));
   border-image-slice: 1;
   border-right: none;
@@ -303,6 +364,43 @@ main section {
     grid-template-columns: 3fr 0.2rem 4fr;
     align-items: center; }
     .section-feature__box .rule {
-      height: 12.8rem;
+      height: 20rem;
       display: block;
       background: linear-gradient(to bottom, #BB47A6, #4E6DD8); }
+
+/*
+----------|📝 : Get
+*/
+.section-get {
+  background-color: #0A0F29; }
+  .section-get__box {
+    display: grid;
+    gap: 4.8rem;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-between; }
+  .section-get__img {
+    width: 100%; }
+  .section-get__content {
+    display: flex;
+    gap: 2.4rem;
+    align-items: flex-start;
+    flex-direction: column; }
+
+/*
+----------|📝 : Collection
+*/
+.section-collection {
+  background-color: #0A0F29; }
+  .section-collection__box {
+    display: flex;
+    gap: 2.4rem;
+    align-items: flex-start;
+    flex-direction: column; }
+    .section-collection__box .paragraph {
+      width: 50%; }
+  .section-collection__cards {
+    list-style-type: none;
+    display: grid;
+    gap: 4.8rem;
+    grid-template-columns: repeat(3, 1fr); }
