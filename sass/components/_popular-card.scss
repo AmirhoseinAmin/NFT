@@ -1,0 +1,99 @@
+/*
+--------------------|📝 : Popular card
+*/
+
+.popular-card {
+  padding: 1.2rem;
+  @include flex(1.2, center, space-between, column);
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1),
+    0 1px 3px rgba(255, 255, 255, 0.2);
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 0.2rem;
+    border-radius: inherit;
+    background: linear-gradient($color-secondary, $color-tertiary);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
+  }
+
+  &__imgs {
+    @include flex(0, center, null, column);
+  }
+
+  &__banner {
+    width: 100%;
+    backface-visibility: hidden;
+    will-change: transform;
+    transition: all 0.5s;
+  }
+
+  &:hover &__banner {
+    transform: scale(0.96);
+  }
+
+  &__img {
+    width: 100%;
+    margin-top: -50%;
+    backface-visibility: hidden;
+    will-change: transform;
+    transition: all 0.5s;
+  }
+
+  &:hover &__img {
+    transform: translateY(-1rem) rotateY(360deg);
+  }
+
+  &__follow {
+    display: block;
+    font-size: 2.4rem;
+    color: rgba($color-white, 0.4);
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  &__about {
+    margin: 1.2rem 0;
+    display: block;
+    font-size: 1.4rem;
+    color: rgba($color-white, 0.4);
+  }
+
+  &__status {
+    width: 100%;
+    @include flex(0, center, space-evenly, null);
+    list-style-type: none;
+    border-top: 0.4rem solid;
+    border-image: linear-gradient(to right, $color-secondary, $color-tertiary);
+    border-image-slice: 1;
+    border-image-outset: 1rem 0;
+    overflow: hidden;
+
+    li {
+      text-align: center;
+      p {
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+        font-weight: 500;
+        color: $color-white;
+      }
+      span {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: rgba($color-white, 0.4);
+      }
+    }
+  }
+}

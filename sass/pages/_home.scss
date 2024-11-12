@@ -121,3 +121,38 @@ main {
     @include grid(4.8, 3);
   }
 }
+
+/*
+----------|📝 : Popular
+*/
+
+.section-popular{
+  background-color: $color-primary;
+
+  &__box{
+
+    .paragraph {
+      width: 50%;
+      margin: 2.4rem auto;
+    }
+  }
+
+  &__cards {
+    @include grid(2.4, null) {
+      grid-template-columns: 6fr 7fr 6fr;
+      grid-template-rows: repeat(5, 9rem);
+    }
+
+    .popular-card:nth-child(1){
+      grid-row: 1/5;
+    }
+
+    .popular-card:nth-child(2){
+      grid-row: 1/6;
+    }
+
+    .popular-card:nth-child(3){
+      grid-row: 1/5;
+    }
+  }
+}

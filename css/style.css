@@ -209,6 +209,9 @@ body {
     .feature-card__img--pink {
       background-color: #BB47A6; }
 
+/*
+--------------------|📝 : NFT card
+*/
 .nft-card {
   height: 73%;
   position: relative;
@@ -261,6 +264,86 @@ body {
       align-items: center; }
   .nft-card__price-eth {
     width: 2.4rem; }
+
+/*
+--------------------|📝 : Popular card
+*/
+.popular-card {
+  padding: 1.2rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1), 0 1px 3px rgba(255, 255, 255, 0.2); }
+  .popular-card:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 0.2rem;
+    border-radius: inherit;
+    background: linear-gradient(#4E6DD8, #BB47A6);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1; }
+  .popular-card__imgs {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+  .popular-card__banner {
+    width: 100%;
+    backface-visibility: hidden;
+    will-change: transform;
+    transition: all 0.5s; }
+  .popular-card:hover .popular-card__banner {
+    transform: scale(0.96); }
+  .popular-card__img {
+    width: 100%;
+    margin-top: -50%;
+    backface-visibility: hidden;
+    will-change: transform;
+    transition: all 0.5s; }
+  .popular-card:hover .popular-card__img {
+    transform: translateY(-1rem) rotateY(360deg); }
+  .popular-card__follow {
+    display: block;
+    font-size: 2.4rem;
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    transition: all 0.3s; }
+    .popular-card__follow:hover {
+      color: #fff; }
+  .popular-card__about {
+    margin: 1.2rem 0;
+    display: block;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.4); }
+  .popular-card__status {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+    border-top: 0.4rem solid;
+    border-image: linear-gradient(to right, #4E6DD8, #BB47A6);
+    border-image-slice: 1;
+    border-image-outset: 1rem 0;
+    overflow: hidden; }
+    .popular-card__status li {
+      text-align: center; }
+      .popular-card__status li p {
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+        font-weight: 500;
+        color: #fff; }
+      .popular-card__status li span {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.4); }
 
 /*
 --------------------|📝 : Layout 
@@ -404,3 +487,23 @@ main section {
     display: grid;
     gap: 4.8rem;
     grid-template-columns: repeat(3, 1fr); }
+
+/*
+----------|📝 : Popular
+*/
+.section-popular {
+  background-color: #0A0F29; }
+  .section-popular__box .paragraph {
+    width: 50%;
+    margin: 2.4rem auto; }
+  .section-popular__cards {
+    display: grid;
+    gap: 2.4rem;
+    grid-template-columns: 6fr 7fr 6fr;
+    grid-template-rows: repeat(5, 9rem); }
+    .section-popular__cards .popular-card:nth-child(1) {
+      grid-row: 1/5; }
+    .section-popular__cards .popular-card:nth-child(2) {
+      grid-row: 1/6; }
+    .section-popular__cards .popular-card:nth-child(3) {
+      grid-row: 1/5; }
