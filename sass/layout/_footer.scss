@@ -1,0 +1,27 @@
+/*
+----------|📝 : Footer
+*/
+
+footer {
+  background: linear-gradient(to left, $color-tertiary, $color-secondary);
+
+  .footer__nav {
+    @include flex(6.4, center, center, null);
+    list-style-type: none;
+
+    li {
+      a {
+        display: block;
+        padding: 2.4rem;
+        font-size: 1.6rem;
+        color: $color-white;
+        text-decoration: none;
+        transition: all 0.3s;
+
+        &:hover {
+          transform: translateY(-.5rem);
+        }
+      }
+    }
+  }
+}

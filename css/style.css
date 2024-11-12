@@ -399,6 +399,27 @@ header {
         border-bottom-right-radius: 2rem; }
 
 /*
+----------|📝 : Footer
+*/
+footer {
+  background: linear-gradient(to left, #BB47A6, #4E6DD8); }
+  footer .footer__nav {
+    display: flex;
+    gap: 6.4rem;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none; }
+    footer .footer__nav li a {
+      display: block;
+      padding: 2.4rem;
+      font-size: 1.6rem;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.3s; }
+      footer .footer__nav li a:hover {
+        transform: translateY(-0.5rem); }
+
+/*
 --------------------|📝 : Pages 
 */
 /*
