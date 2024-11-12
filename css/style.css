@@ -287,6 +287,7 @@ body {
     padding: 0.2rem;
     border-radius: inherit;
     background: linear-gradient(#4E6DD8, #BB47A6);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
     z-index: -1; }
@@ -507,3 +508,28 @@ main section {
       grid-row: 1/6; }
     .section-popular__cards .popular-card:nth-child(3) {
       grid-row: 1/5; }
+
+/*
+----------|📝 : Create
+*/
+.section-create {
+  background-color: #0A0F29; }
+  .section-create__box {
+    min-height: 60rem;
+    display: flex;
+    gap: 2.4rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    z-index: 2; }
+    .section-create__box .paragraph {
+      max-width: 60%; }
+  .section-create__img {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1; }

@@ -109,7 +109,7 @@ main {
   background-color: $color-primary;
 
   &__box {
-    @include flex(2.4, flex-start, null, column); 
+    @include flex(2.4, flex-start, null, column);
 
     .paragraph {
       width: 50%;
@@ -126,11 +126,10 @@ main {
 ----------|📝 : Popular
 */
 
-.section-popular{
+.section-popular {
   background-color: $color-primary;
 
-  &__box{
-
+  &__box {
     .paragraph {
       width: 50%;
       margin: 2.4rem auto;
@@ -143,16 +142,42 @@ main {
       grid-template-rows: repeat(5, 9rem);
     }
 
-    .popular-card:nth-child(1){
+    .popular-card:nth-child(1) {
       grid-row: 1/5;
     }
 
-    .popular-card:nth-child(2){
+    .popular-card:nth-child(2) {
       grid-row: 1/6;
     }
 
-    .popular-card:nth-child(3){
+    .popular-card:nth-child(3) {
       grid-row: 1/5;
     }
+  }
+}
+
+/*
+----------|📝 : Create
+*/
+
+.section-create {
+  background-color: $color-primary;
+
+  &__box {
+    min-height: 60rem;
+    @include flex(2.4, center, center, column);
+    position: relative;
+    text-align: center;
+    z-index: 2;
+
+    .paragraph {
+      max-width: 60%;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    @include absCenter;
+    z-index: -1;
   }
 }
