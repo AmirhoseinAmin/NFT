@@ -5,7 +5,7 @@
 .ending {
   width: 34rem;
   padding: 2.4rem 3.2rem;
-  background-color: rgba($color-gray-dark-1, 0.6);
+  background-color: rgba($color-gray, 0.6);
   border-radius: 0.6rem;
 
   @include respond(phone) {
