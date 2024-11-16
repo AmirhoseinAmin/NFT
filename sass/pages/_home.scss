@@ -5,6 +5,7 @@
 main {
   section {
     padding: 8rem 0;
+    background-color: $color-primary;
   }
 }
 
@@ -17,17 +18,28 @@ main {
 */
 
 .section-hero {
-  background-color: $color-primary;
+  @include respond(tab-port) {
+    padding-top: 0;
+  }
 
   &__box {
     @include grid(0, null) {
       grid-template-columns: 5fr 6fr;
+    }
+
+    @include respond(tab-port) {
+      @include flex(4.8, null, null, column-reverse);
+      text-align: center;
     }
   }
 
   &__content {
     align-self: flex-end;
     @include flex(2.4, null, center, column);
+
+    @include respond(tab-port) {
+      align-items: center;
+    }
   }
 
   &__btns {
@@ -40,6 +52,11 @@ main {
     display: block;
     width: 100%;
     justify-self: flex-end;
+
+    @include respond(tab-port) {
+      max-width: 70rem;
+      justify-self: center;
+    }
   }
 }
 
@@ -48,7 +65,6 @@ main {
 */
 
 .section-feature {
-  background-color: $color-primary;
   background-image: linear-gradient(
     to left,
     rgba($color-tertiary, 0.1),
@@ -66,14 +82,25 @@ main {
 
   &__box {
     @include grid(3.2, null) {
-      grid-template-columns: 3fr 0.2rem 4fr;
+      grid-template-columns: 3fr auto 4fr;
       align-items: center;
     }
 
+    @include respond(tab-port) {
+      @include flex(3.2, null, null, column);
+      text-align: center;
+    }
+
     .rule {
+      width: 0.2rem;
       height: 20rem;
       display: block;
       background: linear-gradient(to bottom, $color-tertiary, $color-secondary);
+
+      @include respond(tab-port) {
+        width: 60%;
+        height: 0.2rem;
+      }
     }
   }
 }
@@ -83,21 +110,31 @@ main {
 */
 
 .section-get {
-  background-color: $color-primary;
-
   &__box {
     @include grid(4.8, 2) {
       align-items: center;
       justify-content: space-between;
     }
+
+    @include respond(tab-port) {
+      @include flex(4.8, null, null, column);
+    }
   }
 
   &__img {
     width: 100%;
+    @include respond(tab-port) {
+      max-width: 50rem;
+    }
   }
 
   &__content {
     @include flex(2.4, flex-start, null, column);
+
+    @include respond(tab-port) {
+      align-items: center;
+      text-align: center;
+    }
   }
 }
 
@@ -106,10 +143,17 @@ main {
 */
 
 .section-collection {
-  background-color: $color-primary;
-
   &__box {
     @include flex(2.4, flex-start, null, column);
+
+    @include respond(tab-port) {
+      @include flex(2.4, center, null, column);
+
+      .paragraph,
+      .heading-secondary {
+        text-align: center;
+      }
+    }
 
     .paragraph {
       width: 50%;
@@ -119,6 +163,14 @@ main {
   &__cards {
     list-style-type: none;
     @include grid(4.8, 3);
+
+    @include respond(tab-port) {
+      @include grid(4.8, 2);
+    }
+
+    @include respond(phone) {
+      @include flex(4.8, null, null, column);
+    }
   }
 }
 
@@ -127,8 +179,6 @@ main {
 */
 
 .section-popular {
-  background-color: $color-primary;
-
   &__box {
     .paragraph {
       width: 50%;
@@ -153,6 +203,10 @@ main {
     .popular-card:nth-child(3) {
       grid-row: 1/5;
     }
+
+    @include respond(tab-port) {
+      @include flex(2.4, center, center, column);
+    }
   }
 }
 
@@ -161,8 +215,6 @@ main {
 */
 
 .section-create {
-  background-color: $color-primary;
-
   &__box {
     min-height: 60rem;
     @include flex(2.4, center, center, column);
@@ -179,5 +231,9 @@ main {
     height: 100%;
     @include absCenter;
     z-index: -1;
+
+    @include respond(phone) {
+      height: 58%;
+    }
   }
 }

@@ -6,6 +6,10 @@
   list-style-type: none;
   @include flex(0, center, space-between, null);
 
+  @include respond(phone) {
+    @include flex(0, center, null, column);
+  }
+
   li {
     padding: 2.4rem;
     @include flex(1.6, center, center, column);

@@ -27,10 +27,7 @@
     --------------------|📝 : Icons
     -->
 
-    <link
-      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
-      rel="stylesheet"
-    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
     <!--
     --------------------|📝 : Css
@@ -39,10 +36,11 @@
     <link rel="stylesheet" href="/css/style.css" />
 
     <!--
-    --------------------|📝 : Title
+    --------------------|📝 : Title & FavIcon
     -->
 
     <title>NFT</title>
+    <link rel="icon" href="img/logo-min.png" />
   </head>
 
   <body>
@@ -58,6 +56,12 @@
             <img src="img/logo-min.png" alt="Logo" class="navigation__logo" />
           </picture>
         </a>
+
+        <input type="checkbox" id="nav-toggle"/>
+        <label for="nav-toggle" class="navigation__toggle">
+          <ion-icon name="menu" class="navigation__open">&nbsp;</ion-icon>
+          <ion-icon name="close" class="navigation__close"></ion-icon>
+        </label>
 
         <nav class="navigation__nav">
           <ul class="navigation__ul">

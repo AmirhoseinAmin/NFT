@@ -3,7 +3,6 @@
 */
 
 .nft-card {
-  height: 73%;
   position: relative;
   padding: 1.2rem;
   border-radius: 2rem;
@@ -12,14 +11,6 @@
   box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1),
     0 1px 3px rgba(255, 255, 255, 0.2);
   transition: all 0.5s;
-
-  &:hover {
-    height: 100%;
-  }
-
-  &:hover &__content {
-    opacity: 1;
-  }
 
   &:before {
     content: "";
@@ -40,9 +31,6 @@
   }
 
   &__content {
-    opacity: 0;
-    transition: all 0.5s;
-    transition-delay: 0.1s;
     margin-top: 1.2rem;
 
     @include grid(0, null) {
@@ -65,6 +53,7 @@
     font-size: 1.4rem;
     font-weight: 400;
     color: $color-white;
+    align-self: center;
 
     &--img {
       @include flex(0.4, center, null, null);
